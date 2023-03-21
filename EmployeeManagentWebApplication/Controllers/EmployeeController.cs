@@ -59,8 +59,8 @@ namespace EmployeeManagentWebApplication.Controllers
         [Route("AddProject")]
         public IActionResult AddProject(ProjectModel project)
         {
-            var project1=_employee.CreateProjects(project);
-            return Ok(project1);
+            var projects=_employee.CreateProjects(project);
+            return Ok(projects);
         }
         [HttpPut]
         [Route("UpdateProject")]
