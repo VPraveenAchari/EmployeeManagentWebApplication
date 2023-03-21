@@ -11,5 +11,6 @@ namespace EmployeeManagentWebApplication.Repository.IRepository
         EmployeeModel UpdateEmployee(EmployeeModel employee,int id);
         ProjectModel CreateProjects(ProjectModel project);
         ProjectModel UpdateProject(ProjectModel project,int id);
+        ProjectResourceMappingModel CreateProjectResourceMapping(ProjectResourceMappingModel projectResourceMapping);
     }
 }

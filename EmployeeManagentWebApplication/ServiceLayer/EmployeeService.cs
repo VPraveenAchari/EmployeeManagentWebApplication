@@ -40,6 +40,8 @@ namespace EmployeeManagentWebApplication.ServiceLayer
             return(_emp.CreateEmployee(employee1));
         }
 
+       
+
         public ProjectModel CreateProjects(ProjectModel project)
         {
             var project1 = new ProjectModel()
@@ -51,7 +53,16 @@ namespace EmployeeManagentWebApplication.ServiceLayer
             };
             return (_emp.CreateProjects(project1));
         }
-
+       
+        public ProjectResourceMappingModel CreateProjectResourceMapping(ProjectResourceMappingModel projectResourceMapping)
+        {
+            var projects = new ProjectResourceMappingModel()
+            {
+                ProjectId = projectResourceMapping.ProjectId,
+                EmployeeId = projectResourceMapping.EmployeeId
+            };
+            return (_emp.CreateProjectResourceMapping(projects));
+        }
         
 
         public ClientModel UpdateClient(ClientModel client, int id)

@@ -34,6 +34,13 @@ namespace EmployeeManagentWebApplication.Controllers
             return Ok(client1);
         }
         [HttpPost]
+        [Route("ProjectMapping")]
+        public IActionResult AddProjectResourceMapping(ProjectResourceMappingModel projects)
+        {
+            var project=_employee.CreateProjectResourceMapping(projects);
+            return Ok(project);
+        }
+        [HttpPost]
         [Route("AddEmployee")]
         public IActionResult AddEmployee(EmployeeModel employeeModel)
         {
@@ -61,6 +68,13 @@ namespace EmployeeManagentWebApplication.Controllers
         {
             var project1 = _employee.UpdateProject(project, id);
             return Ok(project1);
+        }
+        [HttpPost]
+        [Route("AddProjects")]
+        public IActionResult AddProjects(ProjectResourceMappingModel projects)
+        {
+            var project1=_employee.CreateProjectResourceMapping(projects);
+            return Ok(project1);    
         }
     }
 }

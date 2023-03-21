@@ -7,6 +7,7 @@ namespace EmployeeManagentWebApplication.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //ClientId is Primary Key
         public int ClientId { get; set; }
         public string ClientName { get; set; }
         [ForeignKey("ClientType")]

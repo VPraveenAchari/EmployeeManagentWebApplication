@@ -26,6 +26,13 @@ namespace EmployeeManagentWebApplication.Repository
             return (employee);
         }
 
+        public ProjectResourceMappingModel CreateProjectResourceMapping(ProjectResourceMappingModel projectResourceMapping)
+        {
+            _emp.ProjectResourceMapping.Add(projectResourceMapping);
+            _emp.SaveChanges();
+            return (projectResourceMapping);
+        }
+
         public ProjectModel CreateProjects(ProjectModel project)
         {
             _emp.Projects.Add(project);
@@ -33,7 +40,7 @@ namespace EmployeeManagentWebApplication.Repository
             return (project);
         }
 
-       
+    
 
         public ClientModel UpdateClient(ClientModel client, int id)
         {
