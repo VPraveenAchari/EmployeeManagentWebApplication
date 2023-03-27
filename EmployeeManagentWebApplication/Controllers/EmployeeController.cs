@@ -18,7 +18,13 @@ namespace EmployeeManagentWebApplication.Controllers
         {
             _employee = employee;
         }
-
+        [HttpGet]
+        [Route("GetEmployees")]
+        public IActionResult GetEmployees()
+        {
+            var result=_employee.Get();
+            return Ok(result);
+        }
         [HttpPost]
         [Route("AddClient")]
         public IActionResult AddClient(ClientModel client)

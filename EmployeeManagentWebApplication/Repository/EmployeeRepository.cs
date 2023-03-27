@@ -40,7 +40,10 @@ namespace EmployeeManagentWebApplication.Repository
             return (project);
         }
 
-    
+        public IEnumerable<EmployeeModel> Get()
+        {
+            return _emp.Employee.ToList();
+        }
 
         public ClientModel UpdateClient(ClientModel client, int id)
         {

@@ -4,6 +4,7 @@ namespace EmployeeManagentWebApplication.Repository.IRepository
 {
     public interface IEmployee
     {
+        IEnumerable<EmployeeModel> Get();
         ClientModel CreateClient(ClientModel client);
         ClientModel UpdateClient(ClientModel client,int id);
        

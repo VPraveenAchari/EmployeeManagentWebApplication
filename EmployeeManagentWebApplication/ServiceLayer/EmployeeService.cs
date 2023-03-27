@@ -40,8 +40,6 @@ namespace EmployeeManagentWebApplication.ServiceLayer
             return(_emp.CreateEmployee(employee1));
         }
 
-       
-
         public ProjectModel CreateProjects(ProjectModel project)
         {
             var project1 = new ProjectModel()
@@ -78,6 +76,11 @@ namespace EmployeeManagentWebApplication.ServiceLayer
         public ProjectModel UpdateProject(ProjectModel project, int id)
         {
             return (_emp.UpdateProject(project, id));
+        }
+
+        public IEnumerable<EmployeeModel> Get()
+        {
+            return _emp.Get();
         }
     }
 }
